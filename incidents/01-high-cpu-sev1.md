@@ -116,7 +116,7 @@ production-style communication
 
 ### Baseline
 
-
+![uptime command baseline](screenshots/uptime1.png)
 
 
 
