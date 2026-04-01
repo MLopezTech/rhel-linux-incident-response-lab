@@ -116,7 +116,7 @@ production-style communication
 
 ### Baseline
 
-![uptime command baseline](rhel-linux-incident-response-lab/screenshots/Uptime1.png)
+![System Uptime](../screenshots/Uptime1.png)
 
 
 
