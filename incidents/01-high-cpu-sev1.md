@@ -48,7 +48,7 @@ After confirming CPU saturation, processes were analyzed to identify the top CPU
 
 ## Commands Used
 
-```bash
+``` bash
 uptime
 top
 ps aux --sort=-%cpu | head
@@ -66,7 +66,7 @@ pkill yes
 
 top
 ps aux --sort=-%cpu | head
-
+```
 ---
 ## Findings
 
