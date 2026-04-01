@@ -68,6 +68,7 @@ top
 ps aux --sort=-%cpu | head
 ```
 ---
+
 ## Findings
 
 System load and CPU utilization were significantly elevated during the incident window. Real-time monitoring using top confirmed sustained high CPU usage across multiple cores.
@@ -77,9 +78,15 @@ Process analysis using ps aux --sort=-%cpu revealed multiple yes processes consu
 
 ## Root Cause
 
+To simulate a real-world CPU saturation scenario, a controlled load was generated using a known Linux technique:
+
+yes > /dev/null &
+
+
 The incident was caused by multiple CPU-intensive background processes (yes > /dev/null &) consuming excessive processor resources and saturating the CPU.
 
 This resulted in reduced system responsiveness and overall performance degradation.
+
 
 ## Resolution
 
@@ -118,14 +125,23 @@ production-style communication
 
 #### Uptime + Top
 
-![System Uptime](../screenshots/top1.png)
+![System ](../screenshots/top1.png)
 
-
-
+#### ps aux
+![System ](../screenshots/psaux1.png)
 
 ### During Incident
+##### yes > /dev/null >> uptime + top (to show simulatiton affects on CPU and Memory) 
+![System ](../screenshots/highloaduptime.png)
+![System ](../screenshots/tophighload.png)
+
+##### ps aux --sort=-%cpu (Top CPU Processes)
 
 
+
+####
+
+![System Uptime](../screenshots/psaux1.png)
 
 
 
