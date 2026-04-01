@@ -116,7 +116,9 @@ production-style communication
 
 ### Baseline
 
-![System Uptime](../screenshots/Uptime1.png)
+#### Uptime + Top
+
+![System Uptime](../screenshots/top1.png)
 
 
 
