@@ -131,22 +131,22 @@ production-style communication
 ![System ](../screenshots/psaux1.png)
 
 ### During Incident
-##### yes > /dev/null >> uptime + top (to show simulatiton affects on CPU and Memory) 
+##### yes > /dev/null >> uptime + top (to show simulatiton affects on CPU) 
 ![System ](../screenshots/highloaduptime.png)
 ![System ](../screenshots/tophighload.png)
 
 ##### ps aux --sort=-%cpu (Top CPU Processes)
 
 
-
-####
-
-![System Uptime](../screenshots/psaux1.png)
+![System Uptime](../screenshots/topoffendingprocesses.png)
 
 
-
+## The runaway yes processes were terminated using pkill yes, eliminating the source of CPU saturation and restoring available system resources.
 
 ### After Fix
+
+![System Uptime](../screenshots/topafterkillingrunproc.png)
+![System Uptime](../screenshots/psauxafter.png)
 
 
 
