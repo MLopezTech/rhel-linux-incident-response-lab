@@ -2,10 +2,11 @@
 
 ## Scenario
 
-This scenario simulates a production-style performance incident on a Red Hat Enterprise Linux 9 server.
+During an active shift, a monitoring alert was triggered in Splunk indicating sustained high CPU usage on a Red Hat Enterprise Linux 9 host. The alert was based on predefined thresholds for CPU utilization exceeding normal operating levels.
 
-The system becomes slow and unresponsive due to abnormal CPU consumption. The objective is to validate the reported degradation, identify the process responsible for the resource spike, restore system stability, and confirm recovery using a structured incident response approach.
+Around the same time, users began reporting slow system performance and delayed response times when interacting with applications hosted on the system.
 
+Due to the impact on system responsiveness and potential service degradation, the issue was classified as a SEV-1 incident. The objective was to validate the alert, identify the source of CPU saturation, restore system stability, and confirm recovery using a structured incident response approach.
 ---
 
 ## Environment
