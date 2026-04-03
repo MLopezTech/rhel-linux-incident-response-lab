@@ -179,6 +179,8 @@ You are simulating:
 
 curl localhost
 
+![curllocalhost ](../screenshots/curlfailed.png)
+
 🧠 What you SHOULD see
 
 curl: (7) Failed to connect to localhost port 80
