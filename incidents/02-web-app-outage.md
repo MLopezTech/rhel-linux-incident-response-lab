@@ -231,3 +231,18 @@ sudo journalctl -u nginx --no-pager | tail -20
 
 👉 recent service logs
 👉 helps confirm behavior
+
+# PHASE 3 — RESOLUTION + RECOVERY
+
+OBJECTIVE
+Restore service, validate recovery, and confirm system stability.
+
+🟢 STEP 1 — START NGINX (FIX THE ISSUE)
+
+sudo systemctl start nginx
+![curllocalhost ](../screenshots/restartnginx.png)
+
+🧠 What this does
+
+👉 Restores the application
+👉 Fixes the outage
