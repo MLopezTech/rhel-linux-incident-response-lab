@@ -98,5 +98,35 @@ Deploy a working web service to simulate a production application before failure
 
 ### Step 1 — Install Nginx
 
-```bash
+
 sudo dnf install -y nginx
+
+![nginx ](../screenshots/nginxinstall3.png)
+
+### STEP 2 — START NGINX
+
+sudo systemctl start nginx
+
+🧠 What this does
+
+Starts the web service so it begins accepting requests
+
+![failedinstallnginx ](../screenshots/nginxstart.png)
+
+
+### STEP 3 — ENABLE NGINX (IMPORTANT FOR REALISM)
+
+sudo systemctl enable nginx
+
+
+![failedinstallnginx ](../screenshots/nginxenable.png)
+
+### STEP 4 — VERIFY SERVICE IS RUNNING
+
+sudo systemctl status nginx
+
+🧠 What you are LOOKING FOR
+
+You MUST see: active (running)
+
+![failedinstallnginx ](../screenshots/nginxrunninig.png)
