@@ -49,13 +49,13 @@ Simulates a web service outage where an application becomes unavailable. The inv
 
 ---
 
-### 3. SEV-1 Disk Space Exhaustion Causing Service Impact
-Simulates a storage-related incident where disk capacity is fully consumed, impacting system behavior or service functionality. The focus is on identifying high-usage areas and safely reclaiming space.
+### 3. SEV-1 Network vs DNS Isolation Incident
+Simulates a connectivity issue where systems can reach external IPs but fail to resolve hostnames. The investigation differentiates between network and DNS failures and restores proper resolution.
 
 ---
 
-### 4. SEV-2 Network vs DNS Isolation Incident
-Simulates a connectivity issue where systems can reach external IPs but fail to resolve hostnames. The investigation differentiates between network and DNS failures and restores proper resolution.
+### 4. SEV-2 Disk Space Exhaustion Causing Service Impact
+Simulates a storage-related incident where disk capacity is fully consumed, impacting system behavior or service functionality. The focus is on identifying high-usage areas and safely reclaiming space.
 
 ---
 
