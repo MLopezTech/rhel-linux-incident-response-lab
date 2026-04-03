@@ -49,7 +49,7 @@ Simulates a web service outage where an application becomes unavailable. The inv
 
 ---
 
-### 3. SEV-1 Network vs DNS Isolation Incident
+### 3. SEV-1 DNS Resolution Failure Impacting Application Connectivity
 Simulates a connectivity issue where systems can reach external IPs but fail to resolve hostnames. The investigation differentiates between network and DNS failures and restores proper resolution.
 
 ---
