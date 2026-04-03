@@ -246,3 +246,21 @@ sudo systemctl start nginx
 
 👉 Restores the application
 👉 Fixes the outage
+
+🟢 STEP 2 — VERIFY SERVICE IS RUNNING
+
+sudo systemctl status nginx
+![curllocalhost ](../screenshots/recheckstatus.png)
+
+🧠 What you MUST see:
+active (running)
+
+🟢 STEP 3 — VERIFY PORT 80 IS LISTENING AGAIN
+
+ss -tulnp | grep :80
+![curllocalhost ](../screenshots/rechecktulnp.png)
+
+🧠 What you SHOULD see
+
+👉 nginx process bound to port 80
+
