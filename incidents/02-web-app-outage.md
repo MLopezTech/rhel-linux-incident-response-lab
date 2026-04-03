@@ -50,7 +50,45 @@ Due to full service disruption, this incident was treated as SEV-1 requiring imm
 
 ---
 
-# 🚨 PHASE 1 — SERVICE SETUP (BASELINE)
+## 🚨 Pre-Incident Setup Issue (Repository Access Failure)
+
+During initial setup, package installation failed due to the system not being registered with Red Hat Subscription Management.
+
+### Error Observed
+
+sudo dnf install -y nginx
+
+Resulted in:
+
+system not registered
+
+no enabled repositories
+
+package installation failure
+
+### 📸 Screenshot:
+
+![failedinstallnginx ](../screenshots/failedNginxInstall.png)
+
+### Resolution
+
+The system was registered and repositories were enabled:
+
+sudo subscription-manager register
+
+sudo subscription-manager attach --auto
+
+sudo subscription-manager repos --enable=rhel-9-for-x86_64-baseos-rpms
+
+sudo subscription-manager repos --enable=rhel-9-for-x86_64-appstream-rpms
+
+### Confirmation 
+
+After enabling repositories, package installation succeeded.
+
+![failedinstallnginx ](../screenshots/registrationfix.png)
+___
+# PHASE 1 — SERVICE SETUP (BASELINE)
 
 ## Objective
 
