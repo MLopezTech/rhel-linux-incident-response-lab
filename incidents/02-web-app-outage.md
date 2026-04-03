@@ -190,3 +190,18 @@ curl: (7) Failed to connect to localhost port 80
 👉 The application is DOWN
 👉 Not responding
 👉 This confirms user complaint
+
+## 🔴 STEP 3 — CHECK SERVICE STATUS (ROOT CAUSE PATH)
+
+sudo systemctl status nginx
+
+![curllocalhost ](../screenshots/nginxstatus.png)
+
+🧠 What you SHOULD see
+
+inactive (dead)
+
+🧠 What this tells you
+
+👉 Service is DOWN
+👉 Likely root cause
