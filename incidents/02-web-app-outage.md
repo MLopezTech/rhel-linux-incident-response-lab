@@ -88,6 +88,7 @@ After enabling repositories, package installation succeeded.
 
 ![failedinstallnginx ](../screenshots/registrationfix.png)
 ___
+
 # PHASE 1 — SERVICE SETUP (BASELINE)
 
 ## Objective
@@ -155,3 +156,35 @@ status code is 200
 
 ![curllocalhost ](../screenshots/curllocali.png)
 
+ # PHASE 2 — FAILURE + INVESTIGATION
+ 
+ OBJECTIVE
+
+Simulate a real production outage and investigate it like a Service Ops engineer.
+
+## 🔴 STEP 1 — BREAK THE SYSTEM (THE INCIDENT STARTS)
+
+sudo systemctl stop nginx
+
+![curllocalhost ](../screenshots/stopnginx.png)
+
+🧠 What this does
+
+You are simulating:
+👉 application outage
+👉 service failure
+👉 real incident trigger
+
+## 🔴 STEP 2 — VALIDATE FAILURE (CRITICAL THINKING STEP)
+
+curl localhost
+
+🧠 What you SHOULD see
+
+curl: (7) Failed to connect to localhost port 80
+
+🧠 What this proves
+
+👉 The application is DOWN
+👉 Not responding
+👉 This confirms user complaint
