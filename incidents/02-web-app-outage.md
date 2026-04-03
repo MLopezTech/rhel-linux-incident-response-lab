@@ -276,3 +276,5 @@ curl localhost + curl -I localhost
 👉 application is responding again
 👉 outage resolved
 
+# Bridge Call
+The outage was caused by the nginx service being down on the affected host. The service was restarted, and functionality was validated through service status, port checks, and application response. The system has been fully restored.
