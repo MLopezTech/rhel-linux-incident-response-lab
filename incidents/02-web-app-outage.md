@@ -175,7 +175,7 @@ You are simulating:
 👉 service failure
 👉 real incident trigger
 
-## 🔴 STEP 2 — VALIDATE FAILURE (CRITICAL THINKING STEP)
+## 🔴 STEP 2 — VALIDATE FAILURE
 
 curl localhost
 
@@ -191,7 +191,7 @@ curl: (7) Failed to connect to localhost port 80
 👉 Not responding
 👉 This confirms user complaint
 
-## 🔴 STEP 3 — CHECK SERVICE STATUS (ROOT CAUSE PATH)
+## 🔴 STEP 3 — CHECK SERVICE STATUS (ROOT CAUSE)
 
 sudo systemctl status nginx
 
@@ -206,7 +206,7 @@ inactive (dead)
 👉 Service is DOWN
 👉 Likely root cause
 
-## 🔴 STEP 4 — VERIFY PORT IS NOT LISTENING (ELITE STEP)
+## 🔴 STEP 4 — VERIFY PORT IS NOT LISTENING
 
 ss -tulnp | grep :80
 
@@ -220,3 +220,14 @@ ss -tulnp | grep :80
 
 👉 No process is listening on port 80
 👉 Confirms application is truly down
+
+## 🔴 STEP 5 — CHECK LOGS 
+
+sudo journalctl -u nginx --no-pager | tail -20
+
+![curllocalhost ](../screenshots/logcheck.png)
+
+🧠 What this shows
+
+👉 recent service logs
+👉 helps confirm behavior
