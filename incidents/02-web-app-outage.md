@@ -130,3 +130,28 @@ sudo systemctl status nginx
 You MUST see: active (running)
 
 ![failedinstallnginx ](../screenshots/nginxrunninig.png)
+
+### STEP 5 — VALIDATE APPLICATION (THIS IS HUGE)
+
+curl localhost + curl -I localhost
+
+🧠 What this proves
+
+url returned valid HTML content from the web server, confirming that the service is running and responding to HTTP requests. curl does not render the page, it returns the raw response.
+
+#### curl localhost
+
+app is working
+service is responding
+baseline is healthy
+![curllocalhost ](../screenshots/curllocalhost.png)
+
+#### curl -I localhost
+
+app responds
+HTTP is healthy
+status code is 200
+
+
+![curllocalhost ](../screenshots/curllocali.png)
+
