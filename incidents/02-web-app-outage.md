@@ -264,3 +264,15 @@ ss -tulnp | grep :80
 
 👉 nginx process bound to port 80
 
+🟢 STEP 4 — VALIDATE APPLICATION (FINAL PROOF)
+
+curl localhost + curl -I localhost
+
+![curllocalhost ](../screenshots/rechecklocal.png)
+![curllocalhost ](../screenshots/recheckcurli.png)
+
+🧠 What this proves
+
+👉 application is responding again
+👉 outage resolved
+
