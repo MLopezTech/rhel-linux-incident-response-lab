@@ -205,3 +205,18 @@ inactive (dead)
 
 👉 Service is DOWN
 👉 Likely root cause
+
+## 🔴 STEP 4 — VERIFY PORT IS NOT LISTENING (ELITE STEP)
+
+ss -tulnp | grep :80
+
+![curllocalhost ](../screenshots/checkport80.png)
+
+🧠 What you SHOULD see
+
+👉 NOTHING returned
+
+🧠 What this proves
+
+👉 No process is listening on port 80
+👉 Confirms application is truly down
