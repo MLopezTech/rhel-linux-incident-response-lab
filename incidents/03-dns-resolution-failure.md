@@ -154,11 +154,11 @@ Temporary failure in name resolution
 
 ---
 
-### 📸 Screenshot
+###  Screenshot
 
-```
-screenshots/dns-incident/05-ping-domain-fail.png
-```
+
+![System ](../screenshots/domainfail.png)
+
 
 ---
 
