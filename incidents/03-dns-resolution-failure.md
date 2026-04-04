@@ -117,6 +117,8 @@ sudo vi /etc/resolv.conf
 ```
 nameserver 1.1.1.1x
 ```
+![System ](../screenshots/nameserverbefore.png)
+![System ](../screenshots/nameserverchange.png)
 
 ---
 
