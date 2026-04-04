@@ -176,11 +176,13 @@ SUCCESS
 
 ---
 
-### 📸 Screenshot
+###  Screenshot
 
-```
-screenshots/dns-incident/06-ping-ip-success.png
-```
+
+![System ](../screenshots/ipsuccess.png)
+
+
+
 
 ---
 
