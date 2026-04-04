@@ -341,19 +341,5 @@ nslookup google.com
 
 ---
 
-# 📸 SCREENSHOT DIRECTORY
-
-```
-screenshots/dns-incident/
-```
-
-Include:
-
-* baseline success
-* DNS failure
-* IP success
-* investigation
-* fix
-* validation
 
 ---
