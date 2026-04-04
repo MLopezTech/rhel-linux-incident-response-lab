@@ -70,11 +70,11 @@ Verifies raw network connectivity independent of DNS.
 
 ---
 
-### 📸 Screenshot
+###  Screenshot
 
-```
-screenshots/dns-incident/02-ping-ip-success.png
-```
+
+![System ](../screenshots/ping-ip-success.png)
+
 
 ---
 
