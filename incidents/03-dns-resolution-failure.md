@@ -92,9 +92,9 @@ Confirms DNS server is resolving hostnames properly.
 
 ### 📸 Screenshot
 
-```
-screenshots/dns-incident/03-nslookup-success.png
-```
+
+![System ](../screenshots/nslookup.png)
+
 
 ---
 
