@@ -205,15 +205,19 @@ nslookup google.com
 
 ###  Expected Result
 
-DNS server failure / timeout
+nslookup fails with an error indicating that the DNS configuration cannot be parsed, such as:
+
+parse of /etc/resolv.conf failed
+
+This confirms that DNS resolution is not functioning due to an invalid configuration rather than a network connectivity issue.
 
 ---
 
-### 📸 Screenshot
+###  Screenshot
 
-```
-screenshots/dns-incident/07-nslookup-fail.png
-```
+
+![System ](../screenshots/nslookupfailed.png)
+
 
 ---
 
@@ -237,9 +241,9 @@ Invalid nameserver
 
 ### 📸 Screenshot
 
-```
-screenshots/dns-incident/08-check-resolv.png
-```
+
+![System ](../screenshots/invalidnameserver.png)
+
 
 ---
 
