@@ -1,0 +1,354 @@
+# SEV-1 DNS Resolution Failure Impacting Application Connectivity
+
+---
+
+##  Scenario
+
+A monitoring alert is triggered indicating that applications running on a Red Hat Enterprise Linux 9 host are unable to reach external services. Users report failures when accessing external APIs and websites.
+
+Initial validation shows that the system has network connectivity (can reach external IP addresses), but hostname resolution is failing. The objective is to isolate whether the issue is network-related or DNS-related, identify the root cause, restore resolution, and validate recovery.
+
+---
+
+## Environment
+
+* **Operating System:** Red Hat Enterprise Linux 9
+* **Platform:** VirtualBox
+* **Incident Type:** Network / DNS Failure
+* **Severity:** SEV-1
+
+---
+
+## 🚨 Incident Trigger
+
+A monitoring alert from infrastructure monitoring tools (e.g., Nagios / Datadog / CloudWatch equivalent) indicates failed outbound connectivity checks.
+
+Users report:
+
+* Unable to access external services (e.g., APIs, websites)
+* Applications returning connection errors
+
+---
+
+# 🟢 PHASE 1 — BASELINE VALIDATION
+
+##  Objective
+
+Confirm system is healthy before simulating failure.
+
+---
+
+###  Step 1 — Test DNS Resolution
+
+```bash
+ping google.com
+```
+
+###  Explanation
+
+Verifies DNS is working by resolving a hostname.
+
+---
+
+### 📸 Screenshot
+
+```
+screenshots/dns-incident/01-ping-domain-success.png
+```
+
+---
+
+###  Step 2 — Test Network Connectivity (IP)
+
+```bash
+ping 8.8.8.8
+```
+
+###  Explanation
+
+Verifies raw network connectivity independent of DNS.
+
+---
+
+### 📸 Screenshot
+
+```
+screenshots/dns-incident/02-ping-ip-success.png
+```
+
+---
+
+###  Step 3 — DNS Lookup Test
+
+```bash
+nslookup google.com
+```
+
+###  Explanation
+
+Confirms DNS server is resolving hostnames properly.
+
+---
+
+### 📸 Screenshot
+
+```
+screenshots/dns-incident/03-nslookup-success.png
+```
+
+---
+
+# 🔴 PHASE 2 — SIMULATE FAILURE (BREAK DNS)
+
+##  Objective
+
+Simulate real-world DNS outage.
+
+---
+
+###  Step 4 — Break DNS Configuration
+
+```bash
+sudo vi /etc/resolv.conf
+```
+
+👉 Replace contents with:
+
+```
+nameserver 1.1.1.1x
+```
+
+---
+
+### 🧠 Explanation
+
+Introduces an invalid DNS server → resolution fails while network remains intact.
+
+---
+
+### 📸 Screenshot
+
+```
+screenshots/dns-incident/04-break-dns.png
+```
+
+---
+
+# 🔍 PHASE 3 — VALIDATE FAILURE
+
+---
+
+###  Step 5 — Test DNS (Expected Failure)
+
+```bash
+ping google.com
+```
+
+---
+
+###  Expected Result
+
+```
+Temporary failure in name resolution
+```
+
+---
+
+### 📸 Screenshot
+
+```
+screenshots/dns-incident/05-ping-domain-fail.png
+```
+
+---
+
+###  Step 6 — Test Network (Still Works)
+
+```bash
+ping 8.8.8.8
+```
+
+---
+
+###  Expected Result
+
+SUCCESS
+
+---
+
+### 📸 Screenshot
+
+```
+screenshots/dns-incident/06-ping-ip-success.png
+```
+
+---
+
+# THIS IS THE KEY MOMENT
+
+👉 Domain fails
+👉 IP works
+
+= DNS ISSUE (NOT NETWORK)
+
+---
+
+###  Step 7 — Confirm DNS Failure
+
+```bash
+nslookup google.com
+```
+
+---
+
+###  Expected Result
+
+DNS server failure / timeout
+
+---
+
+### 📸 Screenshot
+
+```
+screenshots/dns-incident/07-nslookup-fail.png
+```
+
+---
+
+# 🔍 PHASE 4 — INVESTIGATION
+
+---
+
+###  Step 8 — Check DNS Configuration
+
+```bash
+cat /etc/resolv.conf
+```
+
+---
+
+###  What you see
+
+Invalid nameserver
+
+---
+
+### 📸 Screenshot
+
+```
+screenshots/dns-incident/08-check-resolv.png
+```
+
+---
+
+# 🚨 ROOT CAUSE
+
+DNS resolution failure caused by incorrect or invalid nameserver configuration in `/etc/resolv.conf`.
+
+---
+
+# 🟢 PHASE 5 — RESOLUTION
+
+---
+
+###  Step 9 — Fix DNS
+
+```bash
+sudo vi /etc/resolv.conf
+```
+
+Replace with:
+
+```
+nameserver 8.8.8.8
+```
+
+---
+
+### 📸 Screenshot
+
+```
+screenshots/dns-incident/09-fix-dns.png
+```
+
+---
+
+# 🟢 PHASE 6 — VALIDATION
+
+---
+
+###  Step 10 — Test DNS Again
+
+```bash
+ping google.com
+```
+
+---
+
+### 📸 Screenshot
+
+```
+screenshots/dns-incident/10-ping-domain-restored.png
+```
+
+---
+
+###  Step 11 — Confirm Lookup
+
+```bash
+nslookup google.com
+```
+
+---
+
+###  Screenshot
+
+```
+screenshots/dns-incident/11-nslookup-restored.png
+```
+
+---
+
+# 📣 BRIDGE CALL UPDATE
+
+"The issue was caused by a DNS misconfiguration on the affected host, preventing hostname resolution. Network connectivity remained intact. DNS settings were corrected, and full functionality has been restored."
+
+---
+
+# 🧠 LESSONS LEARNED
+
+* Always differentiate between network vs DNS issues
+* Validate IP connectivity before assuming network failure
+* DNS misconfigurations can cause widespread application outages
+* Structured troubleshooting prevents misdiagnosis
+
+---
+
+#  SKILLS DEMONSTRATED
+
+* DNS troubleshooting
+* Network vs DNS isolation
+* Linux configuration analysis
+* Incident response methodology
+* Root cause identification
+* Recovery validation
+* Production-level communication
+
+---
+
+# 📸 SCREENSHOT DIRECTORY
+
+```
+screenshots/dns-incident/
+```
+
+Include:
+
+* baseline success
+* DNS failure
+* IP success
+* investigation
+* fix
+* validation
+
+---
