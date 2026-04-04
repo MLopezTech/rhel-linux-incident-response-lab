@@ -50,11 +50,11 @@ Verifies DNS is working by resolving a hostname.
 
 ---
 
-### 📸 Screenshot
+###  Screenshot
 
-```
-screenshots/dns-incident/01-ping-domain-success.png
-```
+
+![System ](../screenshots/01-ping-domain-success.png)
+
 
 ---
 
