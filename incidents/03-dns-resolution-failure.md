@@ -117,7 +117,10 @@ sudo vi /etc/resolv.conf
 ```
 nameserver 1.1.1.1x
 ```
+###  Screenshot
+
 ![System ](../screenshots/nameserverbefore.png)
+
 ![System ](../screenshots/nameserverchange.png)
 
 ---
@@ -128,11 +131,6 @@ Introduces an invalid DNS server → resolution fails while network remains inta
 
 ---
 
-### 📸 Screenshot
-
-```
-screenshots/dns-incident/04-break-dns.png
-```
 
 ---
 
