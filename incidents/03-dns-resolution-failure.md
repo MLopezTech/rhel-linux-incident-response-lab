@@ -273,9 +273,9 @@ nameserver 8.8.8.8
 
 ### 📸 Screenshot
 
-```
-screenshots/dns-incident/09-fix-dns.png
-```
+
+![System ](../screenshots/fixdns.png)
+
 
 ---
 
@@ -293,9 +293,9 @@ ping google.com
 
 ### 📸 Screenshot
 
-```
-screenshots/dns-incident/10-ping-domain-restored.png
-```
+
+![System ](../screenshots/testdns.png)
+
 
 ---
 
@@ -309,9 +309,8 @@ nslookup google.com
 
 ###  Screenshot
 
-```
-screenshots/dns-incident/11-nslookup-restored.png
-```
+![System ](../screenshots/testnsllookup.png)
+
 
 ---
 
@@ -321,7 +320,7 @@ screenshots/dns-incident/11-nslookup-restored.png
 
 ---
 
-# 🧠 LESSONS LEARNED
+#  LESSONS LEARNED
 
 * Always differentiate between network vs DNS issues
 * Validate IP connectivity before assuming network failure
