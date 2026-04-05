@@ -207,9 +207,10 @@ Removes the file responsible for disk exhaustion.
 
 ###  Screenshot
 
-```
-screenshots/disk-exhaustion/07-remove-file.png
-```
+
+![System ](../screenshots/cleanup.png)
+
+
 
 ---
 
@@ -235,9 +236,9 @@ Disk usage decreases and free space is restored.
 
 ###  Screenshot
 
-```
-screenshots/disk-exhaustion/08-disk-recovered.png
-```
+
+![System ](../screenshots/fixed1.png)
+
 
 ---
 
@@ -250,6 +251,8 @@ df -i
 ### 🧠 Explanation
 
 Checks inode usage, another potential cause of storage-related issues.
+
+![System ](../screenshots/advanced1.png)
 
 ---
 
@@ -281,47 +284,3 @@ Checks inode usage, another potential cause of storage-related issues.
 
 ---
 
-# 📸 SCREENSHOT DIRECTORY
-
-```
-screenshots/disk-exhaustion/
-```
-
-Include:
-
-* baseline disk usage
-* disk exhaustion
-* investigation steps
-* large file identification
-* resolution
-* recovery validation
-
----
-
-## 📸 Evidence
-
-### Baseline
-
-![Baseline Disk](screenshots/disk-exhaustion/01-baseline-disk.png)
-
-### Disk Exhaustion
-
-![Disk Full](screenshots/disk-exhaustion/03-disk-full.png)
-
-### Investigation
-
-![Disk Investigation](screenshots/disk-exhaustion/04-du-root.png)
-
-### Root Cause
-
-![Large File](screenshots/disk-exhaustion/06-bigfile.png)
-
-### Resolution
-
-![File Removal](screenshots/disk-exhaustion/07-remove-file.png)
-
-### Recovery
-
-![Disk Restored](screenshots/disk-exhaustion/08-disk-recovered.png)
-
----
