@@ -153,9 +153,9 @@ Focuses on `/var`, where logs and variable data are stored.
 
 ### Screenshot
 
-```
-screenshots/disk-exhaustion/05-du-var.png
-```
+
+![System ](../screenshots/varfocus.png)
+
 
 ---
 
