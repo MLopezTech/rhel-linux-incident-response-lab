@@ -86,7 +86,7 @@ Creates a large file to consume disk space, simulating uncontrolled log growth o
 ###  Screenshot
 
 
-
+![System ](../screenshots/fallocate1.png)
 
 
 ---
