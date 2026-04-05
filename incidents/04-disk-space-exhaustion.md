@@ -173,9 +173,9 @@ Lists files in `/var/log` to identify large log files.
 
 ### Screenshot
 
-```
-screenshots/disk-exhaustion/06-bigfile.png
-```
+
+![System ](../screenshots/deeper.png)
+
 
 ---
 
