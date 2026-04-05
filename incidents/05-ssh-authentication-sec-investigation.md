@@ -59,7 +59,8 @@ sudo journalctl -u sshd --no-pager | tail -20
 * No repeated failures
 
  Screenshot
-`screenshots/ssh-incident/02-normal-logs.png`
+![System ](../screenshots/noactivity.png)
+
 
 ---
 
@@ -91,7 +92,7 @@ ssh fakeuser@localhost
 * Security alert conditions
 
 Screenshot
-`screenshots/ssh-incident/03-failed-login.png`
+![System ](../screenshots/fakeuser.png)
 
 ---
 
@@ -116,7 +117,7 @@ sudo journalctl -u sshd --no-pager | tail -50
 * Same user or pattern
 
 Screenshot
-`screenshots/ssh-incident/04-log-analysis.png`
+![System ](../screenshots/proof.png)
 
 ---
 
@@ -131,7 +132,7 @@ sudo journalctl -u sshd | grep "Failed password"
 * Clear visibility of repeated failed login attempts
 
 Screenshot
-`screenshots/ssh-incident/05-failed-filter.png`
+![System ](../screenshots/failedlogs.png)
 
 ---
 
@@ -166,15 +167,7 @@ sudo lastb
 * Confirms authentication failures occurred
 
 Screenshot
-`screenshots/ssh-incident/06-lastb.png`
-
----
-
-## (Optional Advanced Step — Awareness)
-
-```bash
-sudo faillog
-```
+![System ](../screenshots/d12.png)
 
 ---
 
@@ -198,7 +191,7 @@ sudo journalctl -u sshd --since "10 minutes ago"
 * System stable
 
  Screenshot
-`screenshots/ssh-incident/07-validation.png`
+![System ](../screenshots/nonew.png)
 
 ---
 
