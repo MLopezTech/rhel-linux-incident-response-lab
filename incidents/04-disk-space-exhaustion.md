@@ -46,7 +46,7 @@ Confirm disk is healthy before simulating failure.
 ###  Step 1 — Check Disk Usage
 
 ```bash
-df -hscr
+df -h
 ```
 
 ###  Explanation
