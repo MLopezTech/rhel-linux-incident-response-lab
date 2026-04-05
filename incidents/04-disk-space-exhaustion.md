@@ -105,9 +105,9 @@ Root filesystem (`/`) approaches or reaches 100% utilization.
 
 ###  Screenshot
 
-```
-screenshots/disk-exhaustion/03-disk-full.png
-```
+
+![System ](../screenshots/diskfull1.png)
+
 
 ---
 
