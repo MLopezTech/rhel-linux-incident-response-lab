@@ -133,9 +133,9 @@ Summarizes disk usage by top-level directories.
 
 ### Screenshot
 
-```
-screenshots/disk-exhaustion/04-du-root.png
-```
+
+![System ](../screenshots/investigate1.png)
+
 
 ---
 
