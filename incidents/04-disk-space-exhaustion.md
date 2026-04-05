@@ -85,9 +85,9 @@ Creates a large file to consume disk space, simulating uncontrolled log growth o
 
 ###  Screenshot
 
-```
-screenshots/disk-exhaustion/02-create-large-file.png
-```
+
+![System ](../screenshots/fallocate.png)
+
 
 ---
 
